@@ -4,32 +4,32 @@
 #define MACRO_LINKEDLIST template<class DATA_TYPE>
 namespace V
 {
-	MACRO_LINKEDLIST
-		struct Node
-	{
-		DATA_TYPE data;
-		Node* next{ nullptr };
-	};
+MACRO_LINKEDLIST
+struct Node
+{
+DATA_TYPE data{};
+Node* next{};
+};
 
-	MACRO_LINKEDLIST
-		class LinkedList
-	{
-	public:
+MACRO_LINKEDLIST
+class LinkedList
+{
+public:
 		//TODO  Searching
-		Node<DATA_TYPE>* Search(const DATA_TYPE&);
+Node<DATA_TYPE>* Search(const DATA_TYPE&);
 		//TODO Sorting
-		void sort();
+void sort();
 		//TODO Insert
-		void insert(const DATA_TYPE&);
+void insert(const DATA_TYPE&);
 		//TODO delete
-		void remove(const DATA_TYPE&);
-		void append(const DATA_TYPE&);//O(1)
-		void display()const;//O(n)
-	private:
+void remove(const DATA_TYPE&);
+void append(const DATA_TYPE&);//O(1)
+void display()const;//O(n)
+private:
 
-		Node<DATA_TYPE>* head_node = nullptr;
-		Node<DATA_TYPE>* last_node = nullptr;//last or tail node 
-	};
+Node<DATA_TYPE>* head_node = nullptr;
+Node<DATA_TYPE>* last_node = nullptr;//last or tail node 
+};
 }
 MACRO_LINKEDLIST
 V::Node<DATA_TYPE>* V::LinkedList<DATA_TYPE>::Search(const DATA_TYPE&)
@@ -48,7 +48,7 @@ MACRO_LINKEDLIST
 void V::LinkedList<DATA_TYPE>::remove(const DATA_TYPE&)
 {
 }
- MACRO_LINKEDLIST
+MACRO_LINKEDLIST
 void V::LinkedList<DATA_TYPE>::append(const DATA_TYPE& data)//O(1)
 {
 
