@@ -1,17 +1,23 @@
-#include <QCoreApplication>
+
 #include"linkedlist.h"
 #include"linkedlist.h"
 #include<string>
 typedef std::string str;
 int main(int argc, char *argv[])
 {
-    LinkedList<str> student_list{};
-    LinkedList<str> test_list=std::move(student_list);
-    test_list.pushBack("Ryan Ronald");
-    test_list.pushBack("Krish Kr");
-    test_list.pushBack("Kyuoin Lyin");
-    test_list.pushFront("okie");
-    test_list.pushFront("1st");
-    test_list.pushBack("last");
-    test_list.display();
+    LinkedList<int> list;
+    for (auto i = 0; i < 10; ++i)list.pushBack(i);
+    list.display();
+    LinkedList<int>::Node* result=list.search(9);
+    list.display();
+    list.popFront();
+    list.display();
+    list.popFront();
+    list.popBack();
+    list.display();
+    list.popBack();
+    list.display();
+    result=list.search(6);
+    list.display();
+    return result->data;
 }
